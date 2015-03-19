@@ -9,6 +9,9 @@ $(document).ready(function(){
       if(data.code == "ERROR"){
         $('#error_popup_message').html(data.data);
       }
+    })
+    .fail(function(){
+      $('#error_popup_message').html("Hubo algún error con el servidor, intentalo de nuevo");
     });
     
     $('#dlg-invalid-credentials').popup();
