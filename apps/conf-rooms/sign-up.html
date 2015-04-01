@@ -14,32 +14,45 @@
 <div data-role="page">
     <div data-role="header" data-theme="a">
         <a  data-icon="back" data-rel="back">Atrás</a>
-        <h1>Book It</h1>
+        <h1>Hopedi!</h1>
     </div><!-- /header -->
     <div role="main" class="ui-content">
-        <h3>Sign Up</h3>
-        <label for="txt-first-name">First Name</label>
-        <input type="text" name="txt-first-name" id="txt-first-name" value="">
-        <label for="txt-last-name">Last Name</label>
-        <input type="text" name="txt-last-name" id="txt-last-name" value="">
-        <label for="txt-email">Email Address</label>
-        <input type="text" name="txt-email" id="txt-email" value="">
+        <script type="text/javascript" src="js/signup.js"></script>
+        <h3>Registrarse</h3>
+        <label for="txt-first-name">Nombre</label>
+        <input type="text" name="txt-first-name" id="nombre_signup" value="">
+        <label for="txt-email">Email</label>
+        <input type="text" name="txt-email" id="email_signup" value="">
         <label for="txt-password">Password</label>
-        <input type="password" name="txt-password" id="txt-password" value="">
-        <label for="txt-password-confirm">Confirm Password</label>
-        <input type="password" name="txt-password-confirm" id="txt-password-confirm" value="">
-        <a href="#dlg-sign-up-sent" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+        <input type="password" name="txt-password" id="password_signup" value="">
+        <label for="txt-password-confirm">Confirmar Password</label>
+        <input type="password" name="txt-password-confirm" id="password_confirm" value="">
+        <label for="select-choice-1" class="select">Escoge una especialidad:</label>
+        <select name="select-choice-1" id="select-especialidad">
+            <option value="">-------------</option>
+        </select>
+        <a  data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit_signup" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Registrarme!</a>
         <div data-role="popup" id="dlg-sign-up-sent" data-dismissible="false" style="max-width:400px;">
             <div data-role="header">
-                <h1>Almost done...</h1>
+                <h1>Felicidades!!</h1>
             </div>
             <div role="main" class="ui-content">
-                <h3>Confirm Your Email Address</h3>
-                <p>We sent you an email with instructions on how to confirm your email address. Please check your inbox and follow the instructions in the email.</p>
-                <div class="mc-text-center"><a href="sign-in.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                <h3>Te has registrado correctamente</h3>
+                <p>Da click en el boton de abajo para Iniciar sesión</p>
+                <div class="mc-text-center"><a href="sign-in.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">Entrar</a></div>
 
             </div>
         </div>
+        
+        <div  id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
+                <div role="main" class="ui-content">
+                    <h3 class="mc-text-danger">Error</h3>
+                    <p id="error_popup_message"></p>
+                    <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                </div>
+        </div>
+
+
     </div><!-- /content -->
 </div><!-- /page -->
 
