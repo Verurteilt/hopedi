@@ -1,0 +1,394 @@
+/*
+Nombre del sitio:	In Serie 4.01
+Autor:				Marco A. Hernández Pérez
+*/
+
+/*********************
+IMPORTS
+*********************/
+
+@import "mixins.less"; 
+
+/*********************
+ESTILOS GENERALES
+*********************/
+body {
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+	.roboto;
+	color: @gris-100;
+}
+    
+img {
+	max-width:100%;
+}
+
+div {
+}
+    
+hr {
+}
+
+/******* Tipografía ******/
+// Encabezados
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	.roboto;
+	text-align: center;
+	a{
+	}
+}
+
+h1 {
+}
+
+h2 {
+	font-size: 1.55rem;
+	.roboto-bold;
+}
+
+h3 {
+	margin-bottom: 15px;
+	font-size: 1.6rem;
+	color: @azul;
+}
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+// Párrafo
+p {
+}
+
+b {
+}
+
+i {
+}
+
+small {
+}
+
+abbr {
+}
+
+address {
+}
+
+pre {
+}
+
+// Formato de texto
+strong {
+}
+
+em {
+}
+
+dfn {
+}
+
+code {
+}
+
+samp {
+}
+
+kbd{
+}
+
+var {
+}
+
+//Subscript y Superscript
+sub {
+}
+sup {
+}
+
+// Insertado y borrado
+del {
+}
+
+ins {
+}
+
+// Citas
+q {
+}
+
+blockquote {
+	cite {
+	}
+}
+
+/******* Links ******/
+a, a:visited { 
+
+	/* on hover */
+	&:hover, &:focus {
+	}
+	
+	/* on click */
+	&:active {
+	}
+	
+	/* mobile tap color */
+	&:link {
+	}
+}
+/******* Listas ******/
+// Lista desordenada
+ul {
+	li {
+		a, a:visited { 
+		/* on hover */
+			&:hover, &:focus {
+			}
+			/* on click */
+			&:active {
+			}
+			/* mobile tap color */
+			&:link {
+			}
+		}
+		
+		ul{
+			li {
+			}
+		}
+		ol {  			
+			li {
+			}
+		}
+	}
+}
+
+// Lista ordenada
+ol {
+	
+	li {
+		ul{
+			li {
+			}
+		}
+		ol {  			
+			li {
+			}
+		}
+	}
+}
+
+// Listas de definición
+dl {
+	dt {
+	}
+	dd {
+	}
+}
+/******* Tablas ******/
+table {
+	thead {
+		tr {
+			th{
+			}
+		}
+	}
+	
+	tfoot {
+		tr {
+			td {
+			}
+		}
+	}
+	
+	th {
+	}
+	
+	caption {
+	}
+
+	tr {
+		td {
+		}
+	}
+}
+
+/******* Forms ******/
+form {
+	fieldset {
+	}
+	
+	input[type="checkbox"] {
+	}
+	
+	input[type="submit"],
+	input[type="button"] {
+	}
+	
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea,
+	select {
+	}
+	
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="email"]:focus,
+	textarea:focus{
+	}
+	
+	select {
+		optgroup {
+		}
+	}
+
+	label {
+	}
+	
+	legend {
+	}
+	
+}
+
+.ui-page-theme-a .ui-body-inherit {
+	
+}
+/*********************
+HEADER
+*********************/
+header {
+}
+
+// Home
+#header-home {
+	height: 100px;
+	background: @blanco;
+	text-align: center;
+	border: 0;
+
+// Logo
+	img {
+		width: 70%;
+		text-align: center;
+		position: relative;
+		top: 25px;
+	}
+}
+
+// Formulario
+#formulario {
+	text-align: center;
+	background: @blanco;
+	border: 0;
+
+// Logo
+	img {
+		margin: 15px 0;
+		width: 70%;
+		text-align: center;
+	}
+}
+
+.regresar {
+	background: @azul;
+}
+
+/*********** Logo ***********/
+.logo {
+    background: url("");
+    width:;
+    height:;
+}
+
+.logo span {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+/*********************
+HOME
+*********************/
+#home {
+	background: url('../images/fondo-home.jpg') center center no-repeat;
+	background-size: 100% 100%;
+
+	h2, h3 {
+		color: @blanco;
+	}
+
+	h2 {
+		margin-bottom: 10px;
+	}
+}
+
+/*********************
+REGISTRO
+*********************/
+#registro {
+	// background: @azul;
+	// color: @blanco;
+}
+/*********************
+FOOTER
+*********************/
+footer {
+}
+
+/*********************
+BOTONES
+*********************/
+.boton {
+	margin: 10px 0;
+	text-align: center;
+
+	a:link, a:visited {
+		padding: 10px 0;
+		background: transparent;
+		border: 1px solid @blanco;
+		.border-radius(4px);
+		font-size: 1.25rem;
+		color:@blanco;
+		.roboto-cond;
+		text-transform: uppercase;
+		display: block;
+
+		&:hover, &:active {
+			background: transparent;
+			text-decoration: none;
+		}
+	}
+}
+
+// Verde
+.verde {
+	a:link, a:visited {
+		background: @verde;
+
+		&:hover, &:active {
+			background: darken(@verde, 10%);
+		}
+	}
+}
+
+// Naranja
+.naranja {
+	a:link, a:visited {
+		background: @naranja;
+
+		&:hover, &:active {
+			background: darken(@naranja, 10%);
+		}
+	}
+}
+
+// Atrás
