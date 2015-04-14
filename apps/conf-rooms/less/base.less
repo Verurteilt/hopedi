@@ -18,6 +18,10 @@ body {
 	.roboto;
 	color: @gris-100;
 }
+
+.ui-overlay-a, .ui-page-theme-a {
+	background: @blanco;
+}
     
 img {
 	max-width:100%;
@@ -33,6 +37,7 @@ hr {
 // Encabezados
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
+	margin-bottom: 15px;
 	.roboto;
 	text-align: center;
 	a{
@@ -40,20 +45,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+	font-size: 1.62rem;
+	.roboto-bold;
+	color: @verde;
 }
 
 h2 {
 	font-size: 1.55rem;
 	.roboto-bold;
+	color: @naranja;  
 }
 
 h3 {
 	margin-bottom: 15px;
-	font-size: 1.6rem;
+	font-size: 1.33rem;
 	color: @azul;
 }
 
 h4 {
+	color: @gris-80;
+	font-size: 1.22rem;
+	.roboto-cond-bold;
 }
 
 h5 {
@@ -85,7 +97,8 @@ pre {
 }
 
 // Formato de texto
-strong {
+strong, b {
+	.roboto-bold;
 }
 
 em {
@@ -259,27 +272,32 @@ form {
 }
 
 .ui-page-theme-a .ui-body-inherit {
-	
+		background: transparent;
+
 }
 /*********************
 HEADER
 *********************/
 header {
+	img {
+		margin: 15px 0;
+		width: 70%;
+		text-align: center;
+	}
 }
 
 // Home
 #header-home {
-	height: 100px;
+	min-height: 100px;
 	background: @blanco;
 	text-align: center;
 	border: 0;
 
 // Logo
 	img {
+		margin: 15px 0;
 		width: 70%;
 		text-align: center;
-		position: relative;
-		top: 25px;
 	}
 }
 
@@ -298,7 +316,7 @@ header {
 }
 
 .regresar {
-	background: @azul;
+	background: @blanco;
 }
 
 /*********** Logo ***********/
@@ -318,9 +336,14 @@ header {
 /*********************
 HOME
 *********************/
-#home {
-	background: url('../images/fondo-home.jpg') center center no-repeat;
-	background-size: 100% 100%;
+#home, #registro {
+		bottom: 0;
+		padding: 35px 15px;
+		background: url('../images/fondo-home.jpg') center bottom no-repeat;
+		background-size: 100%;
+		height: 100%;
+		overflow: hidden;
+	
 
 	h2, h3 {
 		color: @blanco;
@@ -335,13 +358,38 @@ HOME
 REGISTRO
 *********************/
 #registro {
-	// background: @azul;
-	// color: @blanco;
+	background: @azul;
+
+	label {
+		color: @blanco;
+	}
+
+	input[type="text"], input[type="password"] {
+		background: @blanco;
+		border: 1px solid lighten(@azul, 18%);
+		.border-radius(4px);
+	} 
+}
+
+.password-reset {
+	text-align: center;
+	.roboto-cond-bold;
+	text-decoration: underline;
+	font-style: italic;
+	color: @blanco!important;
+}
+.ui-input-text, .ui-input-search {
+	border: 0;
 }
 /*********************
-FOOTER
+MEDICINAS
 *********************/
-footer {
+#tablas {
+	margin-bottom: 15px;
+
+	img {
+		margin: 10px 0;
+	}
 }
 
 /*********************
@@ -369,6 +417,31 @@ BOTONES
 	}
 }
 
+// Borde
+.borde {
+	a:link, a:visited {
+		background: @blanco;
+		border: 1px solid @azul;
+		color: @azul;
+
+		&:hover, &:active {
+			background: darken(@blanco, 2%);
+			text-decoration: none;
+		}
+	}
+}
+
+// Verde
+.azul {
+	a:link, a:visited {
+		background: @azul;
+
+		&:hover, &:active {
+			background: darken(@azul, 10%);
+		}
+	}
+}
+
 // Verde
 .verde {
 	a:link, a:visited {
@@ -392,3 +465,144 @@ BOTONES
 }
 
 // Atrás
+.atras {
+	a:link, a:visited {
+		background: url('../images/icono-atras.svg')left center no-repeat;
+		background-size: 40px 40px;
+		border: none;
+		color: @azul;
+
+		&:hover, &:active {
+			background: url('../images/icono-atras.svg')left center no-repeat;
+			background-size: 40px 40px;
+			color: darken(@azul, 10%);
+		}
+	}
+}
+
+/**************** Pop up ****************/
+.formula {
+	a:link, a:visited, a:hover, a:active {
+		.boton-medicinas;
+		background: @verde url('../images/icono-formula.svg') 10px center no-repeat;
+		background-size: 30px;
+
+		&:hover, &:active {
+			background: darken(@verde, 10%) url('../images/icono-formula.svg')10px center no-repeat;
+		background-size: 30px;
+		}
+	}
+}
+
+.adversos {
+	a:link, a:visited, a:hover, a:active {
+		.boton-medicinas;
+		background: @naranja url('../images/icono-adversos.svg') 10px center no-repeat;
+		background-size: 30px;
+
+		&:hover, &:active {
+			background: darken(@naranja, 10%) url('../images/icono-adversos.svg')10px center no-repeat;
+		background-size: 30px;
+		}
+	}
+}
+
+/**************** Medicinas ****************/
+.boton-medicinas {
+	padding: 18px 0;
+	padding-left: 50px;
+	background-size: 30px;
+	text-align: left;
+	display: block;
+}
+
+.antibioticos {
+	a:link, a:visited, a:hover, a:active {
+		.boton-medicinas;
+		background: @azul url('../images/icono-antibioticos.svg') 10px center no-repeat;
+		background-size: 30px;
+
+		&:hover, &:active {
+			background: darken(@azul, 10%) url('../images/icono-antibioticos.svg')10px center no-repeat;
+		background-size: 30px;
+		}
+	}
+}
+
+.afines {
+	a:link, a:visited, a:hover, a:active {
+		.boton-medicinas;
+		background: @azul url('../images/icono-afines.svg') 10px center no-repeat;
+		background-size: 30px;
+
+		&:hover, &:active {
+			background: darken(@azul, 10%) url('../images/icono-afines.svg')10px center no-repeat;
+		background-size: 30px;
+		}
+	}
+}
+
+.antivirales {
+	a:link, a:visited, a:hover, a:active {
+		.boton-medicinas;
+		background: @azul url('../images/icono-antivirales.svg') 10px center no-repeat;
+		background-size: 34px;
+
+		&:hover, &:active {
+			background: darken(@azul, 10%) url('../images/icono-antivirales.svg')10px center no-repeat;
+		background-size: 34px;
+		}
+	}
+}
+
+.antimicoticos {
+	a:link, a:visited, a:hover, a:active {
+		.boton-medicinas;
+		background: @azul url('../images/icono-antimicoticos.svg') 10px center no-repeat;
+		background-size: 30px;
+
+		&:hover, &:active {
+			background: darken(@azul, 10%) url('../images/icono-antimicoticos.svg')10px center no-repeat;
+		background-size: 30px;
+		}
+	}
+}
+
+.anestesicos {
+	a:link, a:visited, a:hover, a:active {
+		.boton-medicinas;
+		background: @azul url('../images/icono-anestesicos.svg') 10px center no-repeat;
+		background-size: 34px;
+
+		&:hover, &:active {
+			background: darken(@azul, 10%) url('../images/icono-anestesicos.svg')10px center no-repeat;
+		background-size: 34px;
+		}
+	}
+}
+
+.otros {
+	a:link, a:visited, a:hover, a:active {
+		.boton-medicinas;
+		background: @azul url('../images/icono-otros.svg') 10px center no-repeat;
+		background-size: 22px;
+
+		&:hover, &:active {
+			background: darken(@azul, 10%) url('../images/icono-otros.svg')10px center no-repeat;
+		background-size: 22px;
+		}
+	}
+}
+
+/*********************
+MODAL
+*********************/
+.ui-popup-container {
+	background: @blanco;
+}
+
+.mc-text-danger {
+	color: @rojo;
+	text-align: center;
+	font-style: italic;
+}

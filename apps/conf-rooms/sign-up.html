@@ -24,19 +24,6 @@
 HEADER
 *********************-->
 <header id="formulario" data-role="header">
-
-<!-- Botón regresar -->
-    <div class="regresar">
-        <div class="container">
-            <div class="row">
-            <div class="col-md-12">
-                <div class="boton atras">
-                    <a data-icon="back" data-rel="back" href="#">Atrás</a>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
     <div class="container">
         
 <!-- Logo -->
@@ -58,7 +45,9 @@ REGISTRO
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3>Registrarse</h3>
+
+                <h2>Registrarse</h2>
+
                 <label for="txt-first-name">Nombre</label>
                 <input type="text" name="txt-first-name" id="nombre_signup" value="">
 
@@ -77,7 +66,7 @@ REGISTRO
                 </select>
 
                 <div class="boton verde">
-                    <a  data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit_signup" class="verde" href="#">Registrarme!</a>
+                    <a data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit_signup" href="#">Registrarme!</a>
                 </div>
                 
             </div>
@@ -90,22 +79,38 @@ REGISTRO
             <h1>Felicidades!!</h1>
         </div>
         <div role="main" class="ui-content">
-            <h3>Te has registrado correctamente</h3>
+            <h4>Te has registrado correctamente</h4>
             <p>Da click en el boton de abajo para Iniciar sesión</p>
-            <div class="mc-text-center"><a href="sign-in.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">Entrar</a></div>
 
-        </div>
-    </div>
-    
-    <div  id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
-            <div role="main" class="ui-content">
-                <h3 class="mc-text-danger">Error</h3>
-                <p id="error_popup_message"></p>
-                <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+            <div class="boton verde">
+                <a href="sign-in.html">Entrar</a></div>
             </div>
     </div>
+    
+<!-- Error -->
+    <div id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
+        <div role="main" class="ui-content">
+            <h4 class="mc-text-danger">Error</h4>
+            <p id="error_popup_message"></p>
+            <div class="boton azul">
+                <a href="#">OK</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-</section><!-- /content -->
+<!-- Botón regresar -->
+<div class="regresar">
+    <div class="container">
+        <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <div class="boton atras">
+                <a href="#">Atrás</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
 
 </body>
 </html>
