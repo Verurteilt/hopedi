@@ -36,7 +36,7 @@ HEADER
 <!--*********************
 ENTRAR
 *********************-->
-<section role="main" id="registro">
+<section data-role="main" id="registro">
 
 <!-- Script -->
     <script type="text/javascript" src="js/signin.js"></script>
@@ -47,8 +47,8 @@ ENTRAR
         
                 <h2>Entrar</h2>
 
-                <label for="txt-email">Email</label>
-                <input type="text" name="txt-email" id="email_login" value="" >
+                <label for="txt-cedula">Cédula</label>
+                <input type="text" name="txt-cedula" id="cedula_login" value="" >
 
                 <label for="txt-password">Contraseña</label>
                 <input type="password" name="txt-password" id="password_login" value="" >
@@ -57,13 +57,14 @@ ENTRAR
                     <a  data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit_login" href="#">Enviar</a>
                 </div>
                 
-                <p class="center"><a class="password-reset" href="begin-password-reset.html">¿No puedes acceder a tu cuenta?</a></p>
 
                 <div  id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
                     <div role="main" class="ui-content">
                         <h3 class="mc-text-danger">Error</h3>
                         <p id="error_popup_message"></p>
-                        <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                        <div class="boton azul">
+                            <a href="#" id="close_popup">OK</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,7 +78,7 @@ ENTRAR
         <div class="row">
         <div class="col-xs-6 col-xs-offset-3">
             <div class="boton atras">
-                <a href="#">Atrás</a>
+                <a href="#" data-rel="back">Atrás</a>
             </div>
         </div>
     </div>

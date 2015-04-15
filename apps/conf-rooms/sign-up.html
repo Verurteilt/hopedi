@@ -36,7 +36,7 @@ HEADER
 <!--*********************
 REGISTRO
 *********************-->
-<section role="main" id="registro">
+<section data-role="main" id="registro">
 
 <!-- Script -->
     <script type="text/javascript" src="js/signup.js"></script>
@@ -51,6 +51,9 @@ REGISTRO
                 <label for="txt-first-name">Nombre</label>
                 <input type="text" name="txt-first-name" id="nombre_signup" value="">
 
+                <label for="txt-cedula">Cédula</label>
+                <input type="text" name="txt-cedula" id="cedula_signup" value="">
+
                 <label for="txt-email">Email</label>
                 <input type="text" name="txt-email" id="email_signup" value="">
 
@@ -60,10 +63,6 @@ REGISTRO
                 <label for="txt-password-confirm">Confirmar Password</label>
                 <input type="password" name="txt-password-confirm" id="password_confirm" value="">
 
-                <label for="select-choice-1" class="select">Escoge una especialidad:</label>
-                <select name="select-choice-1" id="select-especialidad">
-                    <option value="">-------------</option>
-                </select>
 
                 <div class="boton verde">
                     <a data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit_signup" href="#">Registrarme!</a>
@@ -88,12 +87,12 @@ REGISTRO
     </div>
     
 <!-- Error -->
-    <div id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
+    <div id="dlg-invalid-credentials" data-dismissible="false" data-role="popup" style="max-width:400px;display:none;">
         <div role="main" class="ui-content">
             <h4 class="mc-text-danger">Error</h4>
             <p id="error_popup_message"></p>
             <div class="boton azul">
-                <a href="#">OK</a>
+                <a href="#" id="close_popup">OK</a>
             </div>
         </div>
     </div>
@@ -105,7 +104,7 @@ REGISTRO
         <div class="row">
         <div class="col-xs-6 col-xs-offset-3">
             <div class="boton atras">
-                <a href="#">Atrás</a>
+                <a href="#" data-rel="back">Atrás</a>
             </div>
         </div>
     </div>

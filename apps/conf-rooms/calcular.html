@@ -40,20 +40,35 @@ HEADER
 CALCULAR
 *********************-->
 <section role="main" id="registro" class="container ui-content">
+    <script type="text/javascript" src="js/formula.js"></script>
+
     <div id="tablas" class="row">
         <div class="col-md-12">
-            <h2>Calcular</h2>
+            <h2>Calcular fórmula: <p id="nombre_formula"></p></h2>
 
-            <label for="">Edad</label>
-            <input type="text" name="txt-email" id="email_login" value="" >
-
+            <label for="">Edad del paciente</label>
+            <input type="text" name="txt-edad" id="edad_calcular" value="" >
+            <br/><br/>
+            <div id="formula_html">
+            </div>
             <div class="boton verde">
-                    <a  data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit_login" href="#">Enviar</a>
+                    <a id="calcular_formula" onclick="calcular_dosis()" href="#">Calcular dosis</a>
                 </div>
         </div>
     </div>
 
 </section>
+<div class="regresar">
+    <div class="container">
+        <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <div class="boton atras">
+                <a href="#" data-rel="back">Atrás</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
 
 </body>
 

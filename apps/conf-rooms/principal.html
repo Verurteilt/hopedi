@@ -17,8 +17,6 @@
  <!-- Javascript
  ================================================== -->
     <script type="text/javascript" src="../../lib/jquery/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="../../lib/underscore/underscore.min.js"></script>
-    <script type="text/javascript" src="../../lib/backbone/backbone.min.js"></script>
     <script type="text/javascript" src="../../lib/jqm/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 </head>
@@ -40,37 +38,48 @@ HEADER
 BIENVENIDO
 *********************-->
 <section role="main" id="principal" class="container ui-content">
+    <script type="text/javascript" src="js/principal.js"></script>
+
     <div class="row">
         <div class="col-md-12">
             <h1>Medicinas</h1>
 
             <div class="boton antibioticos">
-                <a href="#">Antibióticos</a>
+                <a href="#" data-clave="antibioticos" class="farmaco">Antibióticos</a>
             </div>
 
             <div class="boton afines">
-                <a href="#">Afines</a>
+                <a href="#" data-clave="aines" class="farmaco">AINES</a>
             </div>
 
             <div class="boton antivirales">
-                <a href="#">Antivirales</a>
+                <a href="#" data-clave="antivirales" class="farmaco">Antivirales</a>
             </div>
 
             <div class="boton antimicoticos">
-                <a href="#">Antimicóticos</a>
+                <a href="#" data-clave="antimicoticos" class="farmaco">Antimicóticos</a>
             </div>
 
             <div class="boton anestesicos">
-                <a href="#">Anestésicos</a>
+                <a href="#" data-clave="antibioticos" class="farmaco">Anestésicos</a>
             </div>
 
             <div class="boton otros">
-                <a href="#">Otros</a>
+                <a href="#" data-clave="otros" class="farmaco">Otros</a>
             </div>
         </div>
     </div>
 
 </section>
+                <div  id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
+                    <div role="main" class="ui-content">
+                        <h3 class="mc-text-danger">Error</h3>
+                        <p id="error_popup_message"></p>
+                        <div class="boton azul">
+                            <a href="#" id="close_popup">OK</a>
+                        </div>
+                    </div>
+                </div>
 
 </body>
 

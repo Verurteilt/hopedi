@@ -1,10 +1,7 @@
 $(document).ready(function(){
-  $.get('http://localhost:8000/apiv1/especialidades', function(data) {
-    var _data = JSON.parse(data.data);
-    $.each(_data, function(index, val){
-       var option = '<option value="' + val.pk + '">'+ val.fields.nombre+'</option>';
-       $('#select-especialidad').append(option);
-    });
+  $('#close_popup').bind('click',function(){
+      $('#dlg-invalid-credentials').popup('close');
+      $('#dlg-invalid-credentials').hide();
   });
   $('#btn-submit_signup').bind('click', function(event){
   	$.ajax({
@@ -15,11 +12,10 @@ $(document).ready(function(){
       	"email": $('#email_signup').val(),
       	"password": $('#password_signup').val(),
       	"password_2": $('#password_confirm').val(),
-      	"especialidad": $('#select-especialidad').val()
+      	"cedula": $('#cedula_signup').val()
       },
     })
     .done(function(data) {
-      console.log(data);
       if(data.code == "ERROR"){
         $('#error_popup_message').html(data.data);
         $('#dlg-invalid-credentials').popup();

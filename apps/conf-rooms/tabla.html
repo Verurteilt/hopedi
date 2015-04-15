@@ -39,42 +39,45 @@ HEADER
 <!--*********************
 BIENVENIDO
 *********************-->
-<div role="main" id="principal" class="container ui-content">
-    <section id="tablas" class="row">
-        <div class="col-md-12">
-            <h1>Tablas de medicamentos</h1>
+<div data-role="main" id="principal" class="container ui-content">
+    <script type="text/javascript" src="js/tabla.js"></script>
 
-            <div class="tablas">
-                <img src="images/tabla-prueba.jpg" alt="Tabla">
-            </div>
+    <section id="tablas" class="row">
+        <div class="col-md-12" id="tabla_medicamentos">
+
         </div>
     </section>
 
     <section id="registro" class="row">
-        <div class="col-md-12">
-            <h2>Lista de medicinas</h2>
+        <div class="col-md-12" id="lista_medicinas">
 
-            <div class="boton verde">
-                <a href="#">Ampicilina</a>
-            </div>
-
-            <div class="boton verde">
-                <a href="#">Eritromicina</a>
-            </div>
-
-            <div class="boton verde">
-                <a href="#">Claritromicina</a>
-            </div>
-
-            <div class="boton verde">
-                <a href="#">Amoxicilina/Ácido Clavulánico</a>
-            </div>
 
         </div>
     </section>
-
 </div>
+<div class="row" data-role="popup" data-dismissible="false" id="formulas_adversas">
+    <div class="col-md-12">
 
+        <div class="boton verde formula" id="boton_formulas">
+            <a href="#" onclick="obtener_formulas()">Fórmula</a>
+        </div>
+
+        <div class="boton naranja adversos">
+            <a href="#" onclick="efectos_adversos()">Efectos adversos</a>
+        </div>
+    </div>
+</div>
+<div class="regresar">
+    <div class="container">
+        <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <div class="boton atras">
+                <a href="#" data-rel="back">Atrás</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
 </body>
 
 </html>
