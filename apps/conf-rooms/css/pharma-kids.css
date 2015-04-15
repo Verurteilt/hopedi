@@ -5,7 +5,7 @@ Autor: Marco Antonio Hern�ndez P�rez
 Importa todos los archivos en uno solo 
 ******************************************************************/
 /*
-Nombre del sitio:	In Serie 4.01
+Nombre del sitio:	Dental Pharma Kids
 Autor:				Marco A. Hern�ndez P�rez
 */
 /*********************
@@ -367,7 +367,7 @@ header img {
 }
 /*********** Logo ***********/
 .logo {
-  background: url([object Object]);
+  background: url("");
   width: ;
   height: ;
 }
@@ -405,6 +405,16 @@ REGISTRO
 #registro {
   background: #00a8c5;
 }
+#registro h1 {
+  padding: 6px 0;
+  background: #ffffff;
+  color: #00a8c5;
+}
+#registro p {
+  margin-top: 0;
+  color: #ffffff;
+  text-align: center;
+}
 #registro label {
   color: #ffffff;
 }
@@ -430,11 +440,14 @@ REGISTRO
 .ui-input-search {
   border: 0;
 }
-.calcular {
-  background: #00a8c5;
+#resultados {
+  margin: 15px 0;
 }
-.calcular .ui-page-theme-a {
-  background: #00a8c5;
+#resultados h3 {
+  margin-bottom: 4px;
+}
+#resultados p {
+  text-align: center;
 }
 /*********************
 MEDICINAS
@@ -489,6 +502,13 @@ BOTONES
 .borde a:visited:active {
   background: #fafafa;
   text-decoration: none;
+}
+.borde a:link span,
+.borde a:visited span {
+  font-family: 'roboto_condensedregular', Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  display: block;
+  font-weight: normal;
+  font-size: .96rem;
 }
 .azul a:link,
 .azul a:visited {

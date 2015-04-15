@@ -1,5 +1,5 @@
 /*
-Nombre del sitio:	In Serie 4.01
+Nombre del sitio:	Dental Pharma Kids
 Autor:				Marco A. Hernández Pérez
 */
 
@@ -360,6 +360,18 @@ REGISTRO
 #registro {
 	background: @azul;
 
+	h1 {
+		padding: 6px 0;
+		background: @blanco;
+		color: @azul;
+	}
+
+	p {
+		margin-top: 0;
+		color: @blanco;
+		text-align: center;
+	}
+
 	label {
 		color: @blanco;
 	}
@@ -384,10 +396,22 @@ REGISTRO
 }
 
 .calcular {
-	background: @azul;
+	// background: @azul;
 
-	.ui-page-theme-a {
-		background: @azul;
+	// .ui-page-theme-a {
+	// 	background: @azul;
+	// }
+}
+
+#resultados {
+	margin: 15px 0;
+
+	h3 {
+		margin-bottom: 4px;
+	}
+
+	p {
+		text-align: center;
 	}
 }
 /*********************
@@ -437,6 +461,13 @@ BOTONES
 		&:hover, &:active {
 			background: darken(@blanco, 2%);
 			text-decoration: none;
+		}
+
+		span {
+			.roboto-cond;
+			display: block;
+			font-weight: normal;
+			font-size: .96rem;
 		}
 	}
 }
