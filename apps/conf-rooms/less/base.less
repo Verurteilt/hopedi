@@ -281,7 +281,7 @@ HEADER
 header {
 	img {
 		margin: 15px 0;
-		width: 70%;
+		// width: 70%;
 		text-align: center;
 	}
 }
@@ -296,7 +296,7 @@ header {
 // Logo
 	img {
 		margin: 15px 0;
-		width: 70%;
+		// width: 70%;
 		text-align: center;
 	}
 }
@@ -310,7 +310,7 @@ header {
 // Logo
 	img {
 		margin: 15px 0;
-		width: 70%;
+		// width: 70%;
 		text-align: center;
 	}
 }
@@ -378,8 +378,17 @@ REGISTRO
 	font-style: italic;
 	color: @blanco!important;
 }
+
 .ui-input-text, .ui-input-search {
 	border: 0;
+}
+
+.calcular {
+	background: @azul;
+
+	.ui-page-theme-a {
+		background: @azul;
+	}
 }
 /*********************
 MEDICINAS
@@ -398,6 +407,7 @@ BOTONES
 .boton {
 	margin: 10px 0;
 	text-align: center;
+	position: relative;
 
 	a:link, a:visited {
 		padding: 10px 0;
@@ -467,15 +477,37 @@ BOTONES
 // Atrás
 .atras {
 	a:link, a:visited {
-		background: url('../images/icono-atras.svg')left center no-repeat;
-		background-size: 40px 40px;
+		padding-top: 40px;
+		width: 30px;
+		background: url('../images/icono-atras.svg') center top no-repeat;
+		background-size: 30px 30px;
 		border: none;
 		color: @azul;
+		font-size: .8rem;
 
 		&:hover, &:active {
-			background: url('../images/icono-atras.svg')left center no-repeat;
-			background-size: 40px 40px;
+			background: url('../images/icono-atras.svg') center top no-repeat;
+			background-size: 30px 30px;
 			color: darken(@azul, 10%);
+		}
+	}
+}
+
+// Salir
+.salir {
+	a:link, a:visited {
+		padding-top: 40px;
+		width: 30px;
+		background: url('../images/icono-salir.svg') center top no-repeat;
+		background-size: 30px 30px;
+		border: none;
+		color: @gris-80;
+		font-size: .8rem;
+
+		&:hover, &:active {
+			background: url('../images/icono-salir.svg') center top no-repeat;
+			background-size: 30px 30px;
+			color: darken(@gris-80, 10%);
 		}
 	}
 }
@@ -592,6 +624,36 @@ BOTONES
 		background-size: 22px;
 		}
 	}
+}
+
+.bloqueado {
+	a:link, a:visited, a:hover, a:active {
+		background-color: #b1b1b1;
+		color: #e1e1e1;
+
+		&:hover, &:active {
+			background-color: #b1b1b1;
+			color: #e1e1e1;
+		}
+	}
+
+	a:after {
+		content: '';
+		width: 30px;
+		height: 30px;
+		background: url('../images/icono-bloqueado.svg') 98% center no-repeat;
+		background-size: 100% 100%;
+		position: absolute;
+		z-index: 99;
+		top: 17px;
+		right: 12px;
+	}
+
+	
+}
+
+.bloqueado:after {
+	
 }
 
 /*********************

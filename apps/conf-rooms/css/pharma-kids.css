@@ -341,7 +341,6 @@ HEADER
 *********************/
 header img {
   margin: 15px 0;
-  width: 70%;
   text-align: center;
 }
 #header-home {
@@ -352,7 +351,6 @@ header img {
 }
 #header-home img {
   margin: 15px 0;
-  width: 70%;
   text-align: center;
 }
 #formulario {
@@ -362,7 +360,6 @@ header img {
 }
 #formulario img {
   margin: 15px 0;
-  width: 70%;
   text-align: center;
 }
 .regresar {
@@ -370,7 +367,7 @@ header img {
 }
 /*********** Logo ***********/
 .logo {
-  background: url("");
+  background: url([object Object]);
   width: ;
   height: ;
 }
@@ -433,6 +430,12 @@ REGISTRO
 .ui-input-search {
   border: 0;
 }
+.calcular {
+  background: #00a8c5;
+}
+.calcular .ui-page-theme-a {
+  background: #00a8c5;
+}
 /*********************
 MEDICINAS
 *********************/
@@ -448,6 +451,7 @@ BOTONES
 .boton {
   margin: 10px 0;
   text-align: center;
+  position: relative;
 }
 .boton a:link,
 .boton a:visited {
@@ -518,18 +522,39 @@ BOTONES
 }
 .atras a:link,
 .atras a:visited {
-  background: url('../images/icono-atras.svg') left center no-repeat;
-  background-size: 40px 40px;
+  padding-top: 40px;
+  width: 30px;
+  background: url('../images/icono-atras.svg') center top no-repeat;
+  background-size: 30px 30px;
   border: none;
   color: #00a8c5;
+  font-size: .8rem;
 }
 .atras a:link:hover,
 .atras a:visited:hover,
 .atras a:link:active,
 .atras a:visited:active {
-  background: url('../images/icono-atras.svg') left center no-repeat;
-  background-size: 40px 40px;
+  background: url('../images/icono-atras.svg') center top no-repeat;
+  background-size: 30px 30px;
   color: #007d92;
+}
+.salir a:link,
+.salir a:visited {
+  padding-top: 40px;
+  width: 30px;
+  background: url('../images/icono-salir.svg') center top no-repeat;
+  background-size: 30px 30px;
+  border: none;
+  color: #666965;
+  font-size: .8rem;
+}
+.salir a:link:hover,
+.salir a:visited:hover,
+.salir a:link:active,
+.salir a:visited:active {
+  background: url('../images/icono-salir.svg') center top no-repeat;
+  background-size: 30px 30px;
+  color: #4d4f4c;
 }
 /**************** Pop up ****************/
 .formula a:link,
@@ -718,6 +743,35 @@ BOTONES
 .otros a:active:active {
   background: #007d92 url('../images/icono-otros.svg') 10px center no-repeat;
   background-size: 22px;
+}
+.bloqueado a:link,
+.bloqueado a:visited,
+.bloqueado a:hover,
+.bloqueado a:active {
+  background-color: #b1b1b1;
+  color: #e1e1e1;
+}
+.bloqueado a:link:hover,
+.bloqueado a:visited:hover,
+.bloqueado a:hover:hover,
+.bloqueado a:active:hover,
+.bloqueado a:link:active,
+.bloqueado a:visited:active,
+.bloqueado a:hover:active,
+.bloqueado a:active:active {
+  background-color: #b1b1b1;
+  color: #e1e1e1;
+}
+.bloqueado a:after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: url('../images/icono-bloqueado.svg') 98% center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  z-index: 99;
+  top: 17px;
+  right: 12px;
 }
 /*********************
 MODAL
