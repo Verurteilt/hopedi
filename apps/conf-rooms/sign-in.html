@@ -1,43 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hopedi!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/themes/hopedi.min.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <title>Entrar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+ ================================================== -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/themes/hopedi.css" rel="stylesheet" />
     <link href="css/themes/jquery.mobile.icons.min.css" rel="stylesheet" />
     <link href="../../lib/jqm/1.4.5/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/pharma-kids.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../lib/jquery/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="../../lib/underscore/underscore.min.js"></script>
-    <script type="text/javascript" src="../../lib/backbone/backbone.min.js"></script>
-    <script type="text/javascript" src="../../lib/jqm/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+<!-- Javascript
+ ================================================== -->
+    <script src="../../lib/requirejs/require.js" data-main="js/main.js"></script>
 </head>
 
 <body>
-    <div data-role="page" data-add-back-btn="true">
-        <div  data-role="header" data-theme="a">
-            <a  data-icon="back" data-rel="back">Atrás</a>
-            <h1>Hopedi!</h1>
-        </div><!-- /header -->
-        <div role="main" class="ui-content">
-            <script type="text/javascript" src="js/signin.js"></script>
-            <h3>Entrar</h3>
-            <label for="txt-email">Email</label>
-            <input type="text" name="txt-email" id="email_login" value="" >
-            <label for="txt-password">Contraseña</label>
-            <input type="password" name="txt-password" id="password_login" value="" >
-            <a  data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit_login" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Enviar</a>
-            <p class="mc-top-margin-1-5"><a href="begin-password-reset.html">No puedes acceder a tu cuenta?</a></p>
-            <div  id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
-                <div role="main" class="ui-content">
-                    <h3 class="mc-text-danger">Error</h3>
-                    <p id="error_popup_message"></p>
-                    <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+
+<!--*********************
+HEADER
+*********************-->
+<header id="formulario" data-role="header">
+    <div class="container">
+        
+<!-- Logo -->
+        <div class="col-md-12">
+            <img src="images/logo-pharma.jpg" alt="Logo Dental pharma Kids">
+        </div>
+    </div>
+</header>
+
+<!--*********************
+ENTRAR
+*********************-->
+<section role="main" id="registro">
+
+<!-- Script -->
+    <script type="text/javascript" src="js/signin.js"></script>
+
+    <div  class="container">
+        <div class="row">
+            <div class="col-md-12">
+        
+                <h2>Entrar</h2>
+
+                <label for="txt-email">Email</label>
+                <input type="text" name="txt-email" id="email_login" value="" >
+
+                <label for="txt-password">Contraseña</label>
+                <input type="password" name="txt-password" id="password_login" value="" >
+
+                <div class="boton naranja">
+                    <a  data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit_login" href="#">Enviar</a>
+                </div>
+                
+                <p class="center"><a class="password-reset" href="begin-password-reset.html">¿No puedes acceder a tu cuenta?</a></p>
+
+                <div  id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
+                    <div role="main" class="ui-content">
+                        <h3 class="mc-text-danger">Error</h3>
+                        <p id="error_popup_message"></p>
+                        <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                    </div>
                 </div>
             </div>
-        </div><!-- /content -->
-    </div><!-- /page -->
+        </div>
+    </div>
+</section>
+
+<!-- Botón regresar -->
+<div class="regresar">
+    <div class="container">
+        <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <div class="boton atras">
+                <a href="#">Atrás</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
 </body>
 </html>

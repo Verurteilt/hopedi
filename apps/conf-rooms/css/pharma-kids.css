@@ -268,6 +268,10 @@ body {
   font-family: 'robotoregular', Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
   color: #373a36;
 }
+.ui-overlay-a,
+.ui-page-theme-a {
+  background: #ffffff;
+}
 img {
   max-width: 100%;
 }
@@ -279,17 +283,33 @@ h4,
 h5,
 h6 {
   margin: 0;
+  margin-bottom: 15px;
   font-family: 'robotoregular', Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
   text-align: center;
+}
+h1 {
+  font-size: 1.62rem;
+  font-family: 'robotobold', Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  color: #7dc825;
 }
 h2 {
   font-size: 1.55rem;
   font-family: 'robotobold', Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  color: #f9762e;
 }
 h3 {
   margin-bottom: 15px;
-  font-size: 1.6rem;
+  font-size: 1.33rem;
   color: #00a8c5;
+}
+h4 {
+  color: #666965;
+  font-size: 1.22rem;
+  font-family: 'roboto_condensedbold', Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+}
+strong,
+b {
+  font-family: 'robotobold', Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
 }
 /******* Links ******/
 a,
@@ -313,20 +333,27 @@ ul li a:visited {
 }
 /******* Tablas ******/
 /******* Forms ******/
+.ui-page-theme-a .ui-body-inherit {
+  background: transparent;
+}
 /*********************
 HEADER
 *********************/
+header img {
+  margin: 15px 0;
+  width: 70%;
+  text-align: center;
+}
 #header-home {
-  height: 100px;
+  min-height: 100px;
   background: #ffffff;
   text-align: center;
   border: 0;
 }
 #header-home img {
+  margin: 15px 0;
   width: 70%;
   text-align: center;
-  position: relative;
-  top: 25px;
 }
 #formulario {
   text-align: center;
@@ -339,11 +366,11 @@ HEADER
   text-align: center;
 }
 .regresar {
-  background: #00a8c5;
+  background: #ffffff;
 }
 /*********** Logo ***********/
 .logo {
-  background: url([object Object]);
+  background: url("");
   width: ;
   height: ;
 }
@@ -356,23 +383,65 @@ HEADER
 /*********************
 HOME
 *********************/
-#home {
-  background: url('../images/fondo-home.jpg') center center no-repeat;
-  background-size: 100% 100%;
+#home,
+#registro {
+  bottom: 0;
+  padding: 35px 15px;
+  background: url('../images/fondo-home.jpg') center bottom no-repeat;
+  background-size: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 #home h2,
-#home h3 {
+#registro h2,
+#home h3,
+#registro h3 {
   color: #ffffff;
 }
-#home h2 {
+#home h2,
+#registro h2 {
   margin-bottom: 10px;
 }
 /*********************
 REGISTRO
 *********************/
+#registro {
+  background: #00a8c5;
+}
+#registro label {
+  color: #ffffff;
+}
+#registro input[type="text"],
+#registro input[type="password"] {
+  background: #ffffff;
+  border: 1px solid #22deff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  behavior: url(PIE.htc);
+}
+.password-reset {
+  text-align: center;
+  font-family: 'roboto_condensedbold', Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  text-decoration: underline;
+  font-style: italic;
+  color: #ffffff !important;
+}
+.ui-input-text,
+.ui-input-search {
+  border: 0;
+}
 /*********************
-FOOTER
+MEDICINAS
 *********************/
+#tablas {
+  margin-bottom: 15px;
+}
+#tablas img {
+  margin: 10px 0;
+}
 /*********************
 BOTONES
 *********************/
@@ -404,6 +473,29 @@ BOTONES
   background: transparent;
   text-decoration: none;
 }
+.borde a:link,
+.borde a:visited {
+  background: #ffffff;
+  border: 1px solid #00a8c5;
+  color: #00a8c5;
+}
+.borde a:link:hover,
+.borde a:visited:hover,
+.borde a:link:active,
+.borde a:visited:active {
+  background: #fafafa;
+  text-decoration: none;
+}
+.azul a:link,
+.azul a:visited {
+  background: #00a8c5;
+}
+.azul a:link:hover,
+.azul a:visited:hover,
+.azul a:link:active,
+.azul a:visited:active {
+  background: #007d92;
+}
 .verde a:link,
 .verde a:visited {
   background: #7dc825;
@@ -423,6 +515,220 @@ BOTONES
 .naranja a:link:active,
 .naranja a:visited:active {
   background: #ed5907;
+}
+.atras a:link,
+.atras a:visited {
+  background: url('../images/icono-atras.svg') left center no-repeat;
+  background-size: 40px 40px;
+  border: none;
+  color: #00a8c5;
+}
+.atras a:link:hover,
+.atras a:visited:hover,
+.atras a:link:active,
+.atras a:visited:active {
+  background: url('../images/icono-atras.svg') left center no-repeat;
+  background-size: 40px 40px;
+  color: #007d92;
+}
+/**************** Pop up ****************/
+.formula a:link,
+.formula a:visited,
+.formula a:hover,
+.formula a:active {
+  padding: 18px 0;
+  padding-left: 50px;
+  text-align: left;
+  display: block;
+  background: #7dc825 url('../images/icono-formula.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+.formula a:link:hover,
+.formula a:visited:hover,
+.formula a:hover:hover,
+.formula a:active:hover,
+.formula a:link:active,
+.formula a:visited:active,
+.formula a:hover:active,
+.formula a:active:active {
+  background: #629d1d url('../images/icono-formula.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+.adversos a:link,
+.adversos a:visited,
+.adversos a:hover,
+.adversos a:active {
+  padding: 18px 0;
+  padding-left: 50px;
+  text-align: left;
+  display: block;
+  background: #f9762e url('../images/icono-adversos.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+.adversos a:link:hover,
+.adversos a:visited:hover,
+.adversos a:hover:hover,
+.adversos a:active:hover,
+.adversos a:link:active,
+.adversos a:visited:active,
+.adversos a:hover:active,
+.adversos a:active:active {
+  background: #ed5907 url('../images/icono-adversos.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+/**************** Medicinas ****************/
+.boton-medicinas {
+  padding: 18px 0;
+  padding-left: 50px;
+  background-size: 30px;
+  text-align: left;
+  display: block;
+}
+.antibioticos a:link,
+.antibioticos a:visited,
+.antibioticos a:hover,
+.antibioticos a:active {
+  padding: 18px 0;
+  padding-left: 50px;
+  text-align: left;
+  display: block;
+  background: #00a8c5 url('../images/icono-antibioticos.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+.antibioticos a:link:hover,
+.antibioticos a:visited:hover,
+.antibioticos a:hover:hover,
+.antibioticos a:active:hover,
+.antibioticos a:link:active,
+.antibioticos a:visited:active,
+.antibioticos a:hover:active,
+.antibioticos a:active:active {
+  background: #007d92 url('../images/icono-antibioticos.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+.afines a:link,
+.afines a:visited,
+.afines a:hover,
+.afines a:active {
+  padding: 18px 0;
+  padding-left: 50px;
+  text-align: left;
+  display: block;
+  background: #00a8c5 url('../images/icono-afines.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+.afines a:link:hover,
+.afines a:visited:hover,
+.afines a:hover:hover,
+.afines a:active:hover,
+.afines a:link:active,
+.afines a:visited:active,
+.afines a:hover:active,
+.afines a:active:active {
+  background: #007d92 url('../images/icono-afines.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+.antivirales a:link,
+.antivirales a:visited,
+.antivirales a:hover,
+.antivirales a:active {
+  padding: 18px 0;
+  padding-left: 50px;
+  background-size: 30px;
+  text-align: left;
+  display: block;
+  background: #00a8c5 url('../images/icono-antivirales.svg') 10px center no-repeat;
+  background-size: 34px;
+}
+.antivirales a:link:hover,
+.antivirales a:visited:hover,
+.antivirales a:hover:hover,
+.antivirales a:active:hover,
+.antivirales a:link:active,
+.antivirales a:visited:active,
+.antivirales a:hover:active,
+.antivirales a:active:active {
+  background: #007d92 url('../images/icono-antivirales.svg') 10px center no-repeat;
+  background-size: 34px;
+}
+.antimicoticos a:link,
+.antimicoticos a:visited,
+.antimicoticos a:hover,
+.antimicoticos a:active {
+  padding: 18px 0;
+  padding-left: 50px;
+  text-align: left;
+  display: block;
+  background: #00a8c5 url('../images/icono-antimicoticos.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+.antimicoticos a:link:hover,
+.antimicoticos a:visited:hover,
+.antimicoticos a:hover:hover,
+.antimicoticos a:active:hover,
+.antimicoticos a:link:active,
+.antimicoticos a:visited:active,
+.antimicoticos a:hover:active,
+.antimicoticos a:active:active {
+  background: #007d92 url('../images/icono-antimicoticos.svg') 10px center no-repeat;
+  background-size: 30px;
+}
+.anestesicos a:link,
+.anestesicos a:visited,
+.anestesicos a:hover,
+.anestesicos a:active {
+  padding: 18px 0;
+  padding-left: 50px;
+  background-size: 30px;
+  text-align: left;
+  display: block;
+  background: #00a8c5 url('../images/icono-anestesicos.svg') 10px center no-repeat;
+  background-size: 34px;
+}
+.anestesicos a:link:hover,
+.anestesicos a:visited:hover,
+.anestesicos a:hover:hover,
+.anestesicos a:active:hover,
+.anestesicos a:link:active,
+.anestesicos a:visited:active,
+.anestesicos a:hover:active,
+.anestesicos a:active:active {
+  background: #007d92 url('../images/icono-anestesicos.svg') 10px center no-repeat;
+  background-size: 34px;
+}
+.otros a:link,
+.otros a:visited,
+.otros a:hover,
+.otros a:active {
+  padding: 18px 0;
+  padding-left: 50px;
+  background-size: 30px;
+  text-align: left;
+  display: block;
+  background: #00a8c5 url('../images/icono-otros.svg') 10px center no-repeat;
+  background-size: 22px;
+}
+.otros a:link:hover,
+.otros a:visited:hover,
+.otros a:hover:hover,
+.otros a:active:hover,
+.otros a:link:active,
+.otros a:visited:active,
+.otros a:hover:active,
+.otros a:active:active {
+  background: #007d92 url('../images/icono-otros.svg') 10px center no-repeat;
+  background-size: 22px;
+}
+/*********************
+MODAL
+*********************/
+.ui-popup-container {
+  background: #ffffff;
+}
+.mc-text-danger {
+  color: #ff0000;
+  text-align: center;
+  font-style: italic;
 }
 /*
 Nombre del sitio:	In Serie 4.0
