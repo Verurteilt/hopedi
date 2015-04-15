@@ -6,7 +6,6 @@ $(document).ready(function(){
        $('#select-especialidad').append(option);
     });
   });
-
   $('#btn-submit_signup').bind('click', function(event){
   	$.ajax({
       url: 'http://localhost:8000/apiv1/signup/',
