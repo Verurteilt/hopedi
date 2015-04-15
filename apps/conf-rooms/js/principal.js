@@ -1,14 +1,19 @@
+function logout(){
+    localStorage.setItem("premium", undefined);
+    $.mobile.changePage("index.html");
+
+}
 $(document).ready(function(){
-	$.mobile.navigate.history.stack = $.mobile.navigate.history.stack.slice( $.mobile.navigate.history.stack.length - 1 );
 	$('#close_popup').bind('click',function(){
       $('#dlg-invalid-credentials').popup('close');
       $('#dlg-invalid-credentials').hide();
   	});
+
 	$('.farmaco').bind('click', function(event){
 		event.preventDefault();
 		var clave_farmaco = $(this).attr('data-clave');
 		$.ajax({
-			url: 'http://localhost:8000/apiv1/obtener_cuadros_generales_subfarmacos/',
+			url: 'https://aqueous-fjord-8596.herokuapp.com/apiv1/obtener_cuadros_generales_subfarmacos/',
 			type: 'GET',
 			data: {"farmaco_clave":clave_farmaco},
 		})

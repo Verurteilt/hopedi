@@ -5,7 +5,7 @@ $(document).ready(function(){
   });
   $('#btn-submit_login').bind('click',function(){
     $.ajax({
-      url: 'http://localhost:8000/apiv1/login/',
+      url: 'https://aqueous-fjord-8596.herokuapp.com/apiv1/login/',
       type: 'POST',
       data: {"cedula": $('#cedula_login').val(), "password": $('#password_login').val()},
     })
@@ -20,7 +20,11 @@ $(document).ready(function(){
         localStorage.setItem("userpk", data_parseada[0].pk);
         localStorage.setItem("premium", data_parseada[0].fields.pagado);
         //localStorage.setItem("userId", );
-        $.mobile.changePage("principal.html");
+        if(data_parseada[0].fields.pagado == true){
+          $.mobile.changePage("principal.html");          
+        }else if(data_parseada[0].fields.pagado == false){
+          $.mobile.changePage("principal-bloqueado.html");
+        }
       }
     })
     .fail(function(){

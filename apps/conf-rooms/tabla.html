@@ -15,11 +15,6 @@
     <link href="css/pharma-kids.css" rel="stylesheet" />
     
  <!-- Javascript
- ================================================== -->
-    <script type="text/javascript" src="../../lib/jquery/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="../../lib/underscore/underscore.min.js"></script>
-    <script type="text/javascript" src="../../lib/backbone/backbone.min.js"></script>
-    <script type="text/javascript" src="../../lib/jqm/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 </head>
 
@@ -28,10 +23,25 @@
 <!--*********************
 HEADER
 *********************-->
-<header id="header-home" data-role="header" clas="container">
-    <div class="row">
-        <div class="col-md-12">
-            <img src="images/logo-pharma.jpg" alt="Logo Dental pharma Kids">
+<header id="formulario" data-role="header">
+    <div class="container">
+
+        <div class="row">
+
+<!-- Botón regresar -->
+            <div class="col-xs-2">
+                <div class="boton atras">
+                    <a href="#" data-rel="back">Atrás</a>
+                </div>
+            </div>
+
+<!-- Logo -->
+            <div class="col-xs-8 col-md-12">
+                <img src="images/logo-pharma.jpg" alt="Logo Dental pharma Kids">
+            </div>
+
+<!-- Botón salir -->
+            
         </div>
     </div>
 </header>
@@ -56,6 +66,8 @@ BIENVENIDO
     </section>
 </div>
 <div class="row" data-role="popup" data-dismissible="false" id="formulas_adversas">
+    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
     <div class="col-md-12">
 
         <div class="boton verde formula" id="boton_formulas">
@@ -65,17 +77,6 @@ BIENVENIDO
         <div class="boton naranja adversos">
             <a href="#" onclick="efectos_adversos()">Efectos adversos</a>
         </div>
-    </div>
-</div>
-<div class="regresar">
-    <div class="container">
-        <div class="row">
-        <div class="col-xs-6 col-xs-offset-3">
-            <div class="boton atras">
-                <a href="#" data-rel="back">Atrás</a>
-            </div>
-        </div>
-    </div>
     </div>
 </div>
 </body>

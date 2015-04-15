@@ -1,7 +1,7 @@
 function popupfa (_this) {
 	localStorage.setItem("subfarmaco_id", $(_this).attr('data-id'));
 	$.ajax({
-		url: 'http://localhost:8000/apiv1/tiene_formulas/',
+		url: 'https://aqueous-fjord-8596.herokuapp.com/apiv1/tiene_formulas/',
 		data: {"subfarmaco_id": localStorage.getItem("subfarmaco_id")},
 	})
 	.done(function(data) {
@@ -16,7 +16,7 @@ function popupfa (_this) {
 
 function efectos_adversos(){
 	var subfarmaco_id = localStorage.getItem("subfarmaco_id");
-	$.get('http://localhost:8000/apiv1/obtener_efectos_adversos/', {"subfarmaco_id": subfarmaco_id}, function(data) {
+	$.get('https://aqueous-fjord-8596.herokuapp.com/apiv1/obtener_efectos_adversos/', {"subfarmaco_id": subfarmaco_id}, function(data) {
 		localStorage.setItem("efectos_adversos", data.data);
 		$.mobile.changePage("efectos-adversos.html");
 	});
@@ -31,7 +31,7 @@ function cambiar_a_formula(id,nombre){
 
 function obtener_formulas(){
 	var subfarmaco_id = localStorage.getItem("subfarmaco_id");
-	$.get('http://localhost:8000/apiv1/obtener_lista_formulas/', {"subfarmaco_id": subfarmaco_id}, function(data) {
+	$.get('https://aqueous-fjord-8596.herokuapp.com/apiv1/obtener_lista_formulas/', {"subfarmaco_id": subfarmaco_id}, function(data) {
 		var formulas = data.data
 		if(formulas.length == 1){
 			cambiar_a_formula(formulas[0].split("|")[1], formulas[0].split("|")[0])

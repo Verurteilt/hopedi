@@ -16,8 +16,6 @@
     
  <!-- Javascript
  ================================================== -->
-    <script type="text/javascript" src="../../lib/jquery/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="../../lib/jqm/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 </head>
 
@@ -26,10 +24,27 @@
 <!--*********************
 HEADER
 *********************-->
-<header id="header-home" data-role="header" clas="container">
-    <div class="row">
-        <div class="col-md-12">
-            <img src="images/logo-pharma.jpg" alt="Logo Dental pharma Kids">
+<header id="formulario" data-role="header">
+    <div class="container">
+
+        <div class="row">
+
+<!-- Botón regresar -->
+            <div class="col-xs-2">
+            </div>
+
+<!-- Logo -->
+            <div class="col-xs-8 col-md-12">
+                <img src="images/logo-pharma.jpg" alt="Logo Dental pharma Kids">
+            </div>
+
+<!-- Botón salir -->
+            <div class="col-xs-2">
+                <div class="boton salir">
+                    <a href="#" id="logout" onclick="logout();">Salir</a>
+                </div>
+            </div>
+            
         </div>
     </div>
 </header>
@@ -61,7 +76,7 @@ BIENVENIDO
             </div>
 
             <div class="boton anestesicos">
-                <a href="#" data-clave="antibioticos" class="farmaco">Anestésicos</a>
+                <a href="#" data-clave="anestesicos" class="farmaco">Anestésicos</a>
             </div>
 
             <div class="boton otros">
@@ -72,11 +87,12 @@ BIENVENIDO
 
 </section>
                 <div  id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
+                    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
                     <div role="main" class="ui-content">
                         <h3 class="mc-text-danger">Error</h3>
                         <p id="error_popup_message"></p>
                         <div class="boton azul">
-                            <a href="#" id="close_popup">OK</a>
+                            <a href="#" data-rel="back" id="close_popup">OK</a>
                         </div>
                     </div>
                 </div>

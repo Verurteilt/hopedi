@@ -3,9 +3,14 @@ $(document).ready(function(){
       $('#dlg-invalid-credentials').popup('close');
       $('#dlg-invalid-credentials').hide();
   });
+
+  $('#close_popup2').bind('click',function(){
+      $('#dlg-sign-up-sent').popup('close');
+      $('#dlg-sign-up-sent').hide();
+  });
   $('#btn-submit_signup').bind('click', function(event){
   	$.ajax({
-      url: 'http://localhost:8000/apiv1/signup/',
+      url: 'https://aqueous-fjord-8596.herokuapp.com/apiv1/signup/',
       type: 'POST',
       data: {
       	"nombre": $('#nombre_signup').val(), 

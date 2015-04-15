@@ -2,19 +2,20 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Entrar</title>
+    <title>Principal</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- CSS
+ <!-- CSS
  ================================================== -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/themes/hopedi.css" rel="stylesheet" />
     <link href="css/themes/jquery.mobile.icons.min.css" rel="stylesheet" />
     <link href="../../lib/jqm/1.4.5/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" />
     <link href="css/pharma-kids.css" rel="stylesheet" />
+    
+ <!-- Javascript
 
-<!-- Javascript
- ================================================== -->
 </head>
 
 <body>
@@ -29,9 +30,6 @@ HEADER
 
 <!-- Botón regresar -->
             <div class="col-xs-2">
-                <div class="boton atras">
-                    <a href="#" data-rel="back">Atrás</a>
-                </div>
             </div>
 
 <!-- Logo -->
@@ -40,36 +38,52 @@ HEADER
             </div>
 
 <!-- Botón salir -->
+            <div class="col-xs-2">
+                <div class="boton salir">
+                    <a href="#" id="logout" onclick="logout();">Salir</a>
+                </div>
+            </div>
             
         </div>
     </div>
 </header>
 
 <!--*********************
-ENTRAR
+BIENVENIDO
 *********************-->
-<section data-role="main" id="registro">
+<section role="main" id="principal" class="container ui-content">
+    <div class="row">
+        <script type="text/javascript" src="js/principal.js"></script>
+        <div class="col-md-12">
+            <h1>Medicinas</h1>
 
-<!-- Script -->
-    <script type="text/javascript" src="js/signin.js"></script>
+            <div class="boton antibioticos">
+                <a href="#" data-clave="antibioticos" class="farmaco">Antibióticos</a>
+            </div>
 
-    <div  class="container">
-        <div class="row">
-            <div class="col-md-12">
-        
-                <h2>Entrar</h2>
+            <div class="boton afines bloqueado">
+                <a href="#">AINES</a>
+            </div>
 
-                <label for="txt-cedula">Cédula</label>
-                <input type="text" name="txt-cedula" id="cedula_login" value="" >
+            <div class="boton antivirales bloqueado">
+                <a href="#">Antivirales</a>
+            </div>
 
-                <label for="txt-password">Contraseña</label>
-                <input type="password" name="txt-password" id="password_login" value="" >
+            <div class="boton antimicoticos bloqueado">
+                <a href="#">Antimicóticos</a>
+            </div>
 
-                <div class="boton naranja">
-                    <a  data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit_login" href="#">Enviar</a>
-                </div>
-                
+            <div class="boton anestesicos bloqueado">
+                <a href="#">Anestésicos</a>
+            </div>
 
+            <div class="boton otros bloqueado">
+                <a href="#">Otros</a>
+            </div>
+        </div>
+    </div>
+
+</section>
                 <div  id="dlg-invalid-credentials" data-dismissible="false" data-role="poup" style="max-width:400px;display:none;">
                     <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
                     <div role="main" class="ui-content">
@@ -80,11 +94,7 @@ ENTRAR
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Botón regresar -->
 </body>
+
 </html>

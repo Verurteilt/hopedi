@@ -25,10 +25,23 @@ HEADER
 *********************-->
 <header id="formulario" data-role="header">
     <div class="container">
-        
+
+        <div class="row">
+
+<!-- Botón regresar -->
+            <div class="col-xs-2">
+                <div class="boton atras">
+                    <a href="#" data-rel="back">Atrás</a>
+                </div>
+            </div>
+
 <!-- Logo -->
-        <div class="col-md-12">
-            <img src="images/logo-pharma.jpg" alt="Logo Dental pharma Kids">
+            <div class="col-xs-8 col-md-12">
+                <img src="images/logo-pharma.jpg" alt="Logo Dental pharma Kids">
+            </div>
+
+<!-- Botón salir -->
+            
         </div>
     </div>
 </header>
@@ -74,21 +87,24 @@ REGISTRO
     
 <!-- Confirmacion -->
     <div data-role="popup" id="dlg-sign-up-sent" data-dismissible="false" style="max-width:400px;">
+                        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
         <div data-role="header">
             <h1>Felicidades!!</h1>
         </div>
         <div role="main" class="ui-content">
             <h4>Te has registrado correctamente</h4>
-            <p>Da click en el boton de abajo para Iniciar sesión</p>
+            <p>Tu cuenta se validará para ver que tu Cédula sea correcta.</p>
 
             <div class="boton verde">
-                <a href="sign-in.html">Entrar</a></div>
+                <a href="#" id="close_popup2">Cerrar</a></div>
             </div>
     </div>
     
 <!-- Error -->
     <div id="dlg-invalid-credentials" data-dismissible="false" data-role="popup" style="max-width:400px;display:none;">
         <div role="main" class="ui-content">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             <h4 class="mc-text-danger">Error</h4>
             <p id="error_popup_message"></p>
             <div class="boton azul">
@@ -98,18 +114,6 @@ REGISTRO
     </div>
 </section>
 
-<!-- Botón regresar -->
-<div class="regresar">
-    <div class="container">
-        <div class="row">
-        <div class="col-xs-6 col-xs-offset-3">
-            <div class="boton atras">
-                <a href="#" data-rel="back">Atrás</a>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
 
 </body>
 </html>
